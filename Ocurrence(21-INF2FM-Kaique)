@@ -1,0 +1,42 @@
+package com.example.myapplication;
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "ocurrence")
+public class Ocurrence {
+ @PrimaryKey(autoGenerate = true)
+ @NonNull
+ @ColumnInfo(name = "ocurrenceId")
+ private int id;
+ @NonNull
+ @ColumnInfo(name = "ocurrenceCreationDate")
+ private String creationDate;
+ @NonNull
+ @ColumnInfo(name = "ocurrenceDescription")
+ private String description;
+ @NonNull
+ @ColumnInfo(name = "ocurrenceForwarding")
+ private String Forwarding;
+ @NonNull
+ @ColumnInfo(name = "ocurrenceGrade")
+ private int grade; }
+ public int getId() {
+ return this.id;
+ }
+ public void setId(int id) {
+ this.id = id;
+ }
+ public String getCreationDate() {
+ return this.creationDate;
+ }
+ public void setCreationDate(String creationDate) {
+ this.creationDate = creationDate;
+ }
+ public String getName() {
+ return this.name;
+ }
+ public void setName(String name) {
+ this.name = name;
+ }
