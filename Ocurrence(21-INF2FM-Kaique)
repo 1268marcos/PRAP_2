@@ -21,7 +21,7 @@ public class Ocurrence {
  private String Forwarding;
  @NonNull
  @ColumnInfo(name = "ocurrenceGrade")
- private int grade; }
+ private int grade;
  public int getId() {
  return this.id;
  }
@@ -34,9 +34,40 @@ public class Ocurrence {
  public void setCreationDate(String creationDate) {
  this.creationDate = creationDate;
  }
- public String getName() {
- return this.name;
+
+@NonNull
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(@NonNull String description) {
+        this.description = description;
+    }
+
+    @NonNull
+    public String getForwarding() {
+        return Forwarding;
+    }
+
+    public void setForwarding(@NonNull String forwarding) {
+        Forwarding = forwarding;
+    }
+
+    public int getGrade() {
+        return grade;
+    }
+
+    public void setGrade(int grade) {
+        this.grade = grade;
+    }
+ 
+ 
+    public Ocurrence(@NonNull String creationDate, @NonNull String description, @NonNull String forwarding, int grade) {
+        this.creationDate = creationDate;
+        this.description = description;
+        Forwarding = forwarding;
+        this.grade = grade;
+    }
+ 
  }
- public void setName(String name) {
- this.name = name;
- }
+ 
